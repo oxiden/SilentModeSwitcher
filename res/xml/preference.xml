@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/config_category1">
+		<CheckBoxPreference android:title="@string/config_enable" android:summary="@string/config_enable_summary" android:key="config1_enable">
+		</CheckBoxPreference>
+		<Preference android:title="@string/config_alermtime" android:key="config1_alermtime" android:summary="@string/config_alermtime_summary" android:dependency="config1_enable">
+		</Preference>
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/config_category2" android:orderingFromXml="true">
+		<ListPreference android:title="@string/config_weekmode" android:dialogTitle="@string/config_weekmode" android:entryValues="@array/weekmode_values" android:entries="@array/weekmode" android:key="config_weekmode" android:summary="@string/config_weekmode_summary" android:defaultValue="weekmode_m2f">
+		</ListPreference>
+		<ListPreference android:entryValues="@array/mannermode_values" android:entries="@array/mannermode" android:dialogTitle="@string/config_mannermode" android:title="@string/config_mannermode" android:key="config_mannermode" android:summary="@string/config_mannermode_summary" android:defaultValue="mannermode_vibrate">
+		</ListPreference>
+	</PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">SilentMode Switcher</string>
+	<string name="on_alerm_notice">マナーモードをONにしました</string>
+	<string name="config_category1">機能</string>
+	<string name="config_enable">マナーモード切り替え</string>
+	<string name="config_enable_summary">マナーモード機能を切り替えます</string>
+	<string name="config1_enable">動作</string>
+	<string name="enable">有効</string>
+	<string name="disable">無効</string>
+	<string name="config_alermtime">切り替え時間</string>
+	<string name="config_alermtime_summary">切り替え時間を指定します</string>
+	<string name="config1_alermtime">切り替え時間</string>
+	<string name="config_category2">その他</string>
+	<string name="config_weekmode">曜日</string>
+	<string name="config_weekmode_summary">動作させる曜日を選択します</string>
+	<string-array name="weekmode">
+		<item>月～金</item>
+		<item>月～土</item>
+		<item>制限なし(毎日)</item>
+	</string-array>
+	<string-array name="weekmode_values">
+		<item>weekmode_m2f</item>
+		<item>weekmode_m2s</item>
+		<item>weekmode_everyday</item>
+	</string-array>
+	<string name="config_mannermode">マナーモードの種類</string>
+	<string name="config_mannermode_summary">バイブレーション、通常マナー(無音)を選択します</string>
+	<string-array name="mannermode">
+		<item>バイブレーション</item>
+		<item>通常マナー</item>
+	</string-array>
+	<string-array name="mannermode_values">
+		<item>mannermode_vibrate</item>
+		<item>mannermode_silent</item>
+	</string-array>
+</resources>
