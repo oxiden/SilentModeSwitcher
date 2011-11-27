@@ -73,7 +73,6 @@ public class SilentModeSwitcher extends PreferenceActivity {
 	// --------------------------Preference--------------------------
 	private class onPreferenceChangeListener implements OnPreferenceChangeListener {
 
-		@Override
 		public boolean onPreferenceChange(Preference preference, Object newValue) {
 			// preference.setSummary((CharSequence)newValue);
 			Logger.debug("key=" + preference.getKey());
@@ -100,7 +99,6 @@ public class SilentModeSwitcher extends PreferenceActivity {
 
 	private class PreferenceClickListener implements OnPreferenceClickListener {
 
-		@Override
 		public boolean onPreferenceClick(Preference preference) {
 			Logger.debug("key=" + preference.getKey());
 			Integer[] alermtime = getAlermtime();
@@ -114,7 +112,6 @@ public class SilentModeSwitcher extends PreferenceActivity {
 
 	private class TimePickerSetListener implements OnTimeSetListener {
 
-		@Override
 		public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 			Logger.debug("TimePickerSetListener=" + hourOfDay + ":" + minute);
 			setAlermtime(hourOfDay, minute);
