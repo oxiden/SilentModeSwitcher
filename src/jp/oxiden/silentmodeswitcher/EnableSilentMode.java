@@ -35,9 +35,7 @@ public class EnableSilentMode extends BroadcastReceiver {
 			m_sms.setContext(context);
 			// サイレントモードへの切り替え
 			m_context = context;
-			Logger.debug("==========Scheduled timing has come===========");
-			Toast.makeText(context, getMsg(R.string.on_alerm_notice), Toast.LENGTH_LONG).show();
-			setSilentMode();
+			setSilentMode(context);
 			// 再スケジュールする
 			m_sms.startAlerm(true);
 		}
@@ -46,13 +44,15 @@ public class EnableSilentMode extends BroadcastReceiver {
 		}
 	}
 
-	private void setSilentMode() {
+	private void setSilentMode(Context context) {
+		Logger.debug("==========Scheduled timing has come===========");
 		// 土日祝は除く
 		if (!isWeekDay()) {
 			Logger.debug("return cause today is holiday.");
 			return;
 		}
 
+		Toast.makeText(context, getMsg(R.string.on_alerm_notice), Toast.LENGTH_LONG).show();
 		notify("サイレントモードに移行しました。今日も一日がんばりましょう。(がんばりましょう)");
 
 		// マナーモードにするよ。
